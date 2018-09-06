@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="ISO-8859-1">
+<title>Get Request...</title>
+</head>
+<body>
+	<div align="center">Hi Resorce....
+		<input id="call" type="submit" value="GetRes" onclick="getReq('http://localhost:8080/book/findByDescLike/y')">
+	</div>
+	
+</body>
+
+<script type="text/javascript">
+	function getReq(getUrl) {
+		var xmlHttp = new XmlHttpRequest();
+		xmlHttp.open("GET", getUrl, false);
+		xmlHttp.send(null);
+		return xmlHttp.responseText;
+	}
+</script>
+
+</html>
